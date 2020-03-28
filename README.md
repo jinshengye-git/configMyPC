@@ -22,16 +22,21 @@ cp .rosrc ~/
 ## Install useful things
 ```
 sudo apt update
-sudo apt install git git-lfs cmake cmake-gui zsh snap vim htop tmux
+sudo apt install -y git git-lfs cmake cmake-gui zsh snap vim htop tmux gimp gawk build-essential dkms
 sudo apt upgrade
+sudo snap install ttyplot
+sudo apt autoremove
 sudo reboot
 ```
+## Install Tex
+```
+sudo apt install texlive-full
+```
+
 
 ## Install CUDA and  cuDNN and TensorRT
 
 ```
-sudo apt-get install build-essential dkms
-sudo apt autoremove
 sudo apt-get install freeglut3 freeglut3-dev libxi-dev libxmu-dev
 sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
 wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
