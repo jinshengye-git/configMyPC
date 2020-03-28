@@ -222,11 +222,18 @@ mkdir -p ~/catkin_ws/src
 cd catkin_ws
 catkin_make
 
-sudo apt install ros-melodic-urdf ros-melodic-roslint ros-melodic-robot-pose-ekf ros-melodic-image-transport ros-melodic-velodyne-pointcloud ros-melodic-costmap-2d ros-melodic-rqt-gui ros-melodic-rqt-gui-cpp ros-melodic-joy ros-melodic-xacro
-
+sudo apt install ros-melodic-urdf ros-melodic-roslint ros-melodic-robot-pose-ekf ros-melodic-image-transport 
+sudo apt install ros-melodic-velodyne-pointcloud ros-melodic-costmap-2d ros-melodic-rqt-gui ros-melodic-rqt-gui-cpp 
+sudo apt install ros-melodic-joy ros-melodic-xacro ros-melodic-controller-manager ros-melodic-transmission-interface
+sudo apt install ros-melodic-joint-limits-interface ros-melodic-global-planner ros-melodic-gmapping 
+sudo apt install ros-melodic-robot-state-publisher ros-melodic-kobuki-driver
 sudo apt install ros-melodic-nav-core ros-melodic-navfn ros-melodic-move-base-msgs ros-melodic-tf-conversions
 sudo apt install ros-melodic-eigen-conversions ros-melodic-tf2-geometry-msgs ros-melodic-base-local-planner 
-sudo apt install ros-melodic-interactive-markers 
+sudo apt install ros-melodic-interactive-markers ros-melodic-rqt-robot-dashboard ros-melodic-gazebo-dev 
+sudo apt install ros-melodic-ecl-exceptions ros-melodic-ecl-threads ros-melodic-kobuki-msgs ros-melodic-yocs-controllers
+sudo apt install ros-melodic-ecl-geometry ros-melodic-kobuki-dock-drive ros-melodic-polled-camera 
+sudo apt install ros-melodic-camera-info-manager ros-melodic-control-toolbox ros-melodic-move-base
+sudo apt install ros-melodic-ecl-streams ros-melodic-rqt-plot 
 ```
 
 ## install logger
