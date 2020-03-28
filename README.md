@@ -64,16 +64,13 @@ install it
 ```
 sudo apt -y remove x264 libx264-dev
 sudo apt autoremove
-sudo apt -y install build-essential checkinstall cmake pkg-config yasm
-sudo apt -y install git gfortran
+sudo apt -y install checkinstall pkg-config yasm gfortran
+sudo apt -y install libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
 sudo apt -y install libjpeg8-dev libjasper-dev libpng12-dev
 sudo apt -y install libtiff5-dev
 sudo apt -y install libtiff-dev
 sudo apt -y install libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
 sudo apt -y install libxine2-dev libv4l-dev
-sudo apt -y install libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
-sudo apt -y install libxine2-dev libv4l-dev
-sudo apt -y install libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
 sudo apt -y install libgtk2.0-dev libtbb-dev qt5-default
 sudo apt -y install libatlas-base-dev
 sudo apt -y install libfaac-dev libmp3lame-dev libtheora-dev
@@ -85,7 +82,6 @@ sudo apt -y install libprotobuf-dev protobuf-compiler
 sudo apt -y install libgoogle-glog-dev libgflags-dev
 sudo apt -y install libgphoto2-dev libeigen3-dev libhdf5-dev doxygen
 sudo apt -y install python3-dev python3-pip python3-venv python-dev python-pip
-sudo apt install libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
 sudo apt install libopenblas-dev libopenblas-base
 sudo apt install libgtk-3-dev
 sudo -H pip install numpy
