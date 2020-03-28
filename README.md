@@ -194,6 +194,18 @@ cd fonts
 ./install.sh
 
 ```
+## Install apriltags
+
+```
+cd ~/app
+git clone https://github.com/SeaosRobotics/apriltag.git
+cd apriltag
+cmake .
+make
+sudo make install
+```
+
+
 
 ## Install ROS
 
@@ -203,12 +215,26 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31
 sudo apt update
 sudo apt install ros-melodic-ros-base
 sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
-sudo apt install python-rosdep
+sudo apt install python-rosdep 
 sudo rosdep init
 rosdep update
 mkdir -p ~/catkin_ws/src
 cd catkin_ws
 catkin_make
+
+sudo apt install ros-melodic-urdf ros-melodic-roslint ros-melodic-robot-pose-ekf ros-melodic-image-transport ros-melodic-velodyne-pointcloud ros-melodic-costmap-2d ros-melodic-rqt-gui ros-melodic-rqt-gui-cpp ros-melodic-joy ros-melodic-xacro
+
+sudo apt install ros-melodic-nav-core ros-melodic-navfn ros-melodic-move-base-msgs ros-melodic-tf-conversions
+sudo apt install ros-melodic-eigen-conversions ros-melodic-tf2-geometry-msgs ros-melodic-base-local-planner 
+sudo apt install ros-melodic-interactive-markers 
 ```
 
+## install logger
+
+```
+cd ~/app
+git clone https://github.com/SeaosRobotics/logger.git
+cd logger
+python setup.py bdist_egg --exclude-source-files
+```
 
