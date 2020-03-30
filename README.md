@@ -233,7 +233,16 @@ sudo apt -y install ros-melodic-interactive-markers ros-melodic-rqt-robot-dashbo
 sudo apt -y install ros-melodic-ecl-exceptions ros-melodic-ecl-threads ros-melodic-kobuki-msgs ros-melodic-yocs-controllers
 sudo apt -y install ros-melodic-ecl-geometry ros-melodic-kobuki-dock-drive ros-melodic-polled-camera 
 sudo apt -y install ros-melodic-camera-info-manager ros-melodic-control-toolbox ros-melodic-move-base
-sudo apt -y install ros-melodic-ecl-streams ros-melodic-rqt-plot 
+sudo apt -y install ros-melodic-ecl-streams ros-melodic-rqt-plot ros-melodic-yocs-cmd-vel-mux ros-melodic-map-server
+sudo apt -y install ros-melodic-rviz ros-melodic-yocs-velocity-smoother ros-melodic-amcl
+
+#install robot_pose_publisher
+roscd
+cd ../src
+git clone https://github.com/GT-RAIL/robot_pose_publisher.git
+cd ..
+catkin_make
+
 ```
 
 ## install logger
