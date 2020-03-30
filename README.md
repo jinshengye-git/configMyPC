@@ -234,7 +234,7 @@ sudo apt -y install ros-melodic-ecl-exceptions ros-melodic-ecl-threads ros-melod
 sudo apt -y install ros-melodic-ecl-geometry ros-melodic-kobuki-dock-drive ros-melodic-polled-camera 
 sudo apt -y install ros-melodic-camera-info-manager ros-melodic-control-toolbox ros-melodic-move-base
 sudo apt -y install ros-melodic-ecl-streams ros-melodic-rqt-plot ros-melodic-yocs-cmd-vel-mux ros-melodic-map-server
-sudo apt -y install ros-melodic-rviz ros-melodic-yocs-velocity-smoother ros-melodic-amcl
+sudo apt -y install ros-melodic-rviz ros-melodic-yocs-velocity-smoother ros-melodic-amcl ros-melodic-rosbridge-suite
 
 #install robot_pose_publisher
 roscd
