@@ -157,20 +157,6 @@ sudo mkdir /usr/local/lib/cmake/cvsba
 sudo mv /usr/local/lib/cmake/Findcvsba.cmake /usr/local/lib/cmake/cvsba/cvsbaConfig.cmake
 ```
 
-## install RtabMap
-
-```
-git clone https://github.com/SeaosRobotics/rtabmap.git
-cd rtabmap
-mkdir build
-cd build
-cmake ..
-
-# make sure your CSPARSE_INCLUDE_DIR is set to /home/s-jin/app/g2o/EXTERNAL/csparse
-
-make -j8
-sudo make install
-```
 
 
 ## Install Sublime Text
@@ -204,7 +190,42 @@ cmake .
 make
 sudo make install
 ```
+## Install libpointmatcher
+```
+git clone git://github.com/ethz-asl/libnabo.git
+cd libnabo
+SRC_DIR=`pwd`
+BUILD_DIR=${SRC_DIR}/build
+mkdir -p ${BUILD_DIR} && cd ${BUILD_DIR}
+cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ${SRC_DIR}
+# if Eigen or Boost are not available system-wide, run at that point: 
+#   cmake-gui .
+# cmake-gui allows you to tell the location of Eigen or Boost
+make
+sudo make install
 
+
+https://github.com/ethz-asl/libpointmatcher.git
+cd libpointmatcher
+mkdir build && cd build
+cmake ..
+make
+sudo make install
+```
+## install RtabMap
+
+```
+git clone https://github.com/SeaosRobotics/rtabmap.git
+cd rtabmap
+mkdir build
+cd build
+cmake ..
+
+# make sure your CSPARSE_INCLUDE_DIR is set to /home/s-jin/app/g2o/EXTERNAL/csparse
+
+make -j8
+sudo make install
+```
 
 
 ## Install ROS
