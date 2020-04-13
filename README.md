@@ -143,7 +143,7 @@ Things you need to checkout:
 - make sure sfm available
 - make sure CUDA IS ON
 - make sure NONFREE 
-- make sure MODULE path
+- make sure MODULE path  e.g.   /home/$USER/opencv_contrib/modules
 - make sure uncheck `codec` of cuda
 
 Then click "Generate" ,  after it finished, close cmake-gui and 
