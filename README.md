@@ -55,6 +55,27 @@ sudo apt update
 sudo apt -y install -y --no-install-recommends libnvinfer-dev
 nvidia-smi
 ```
+then add these lines to your .bashrc or  other  bash environment config files
+
+```
+CUDA_VERSION=10.0
+export PATH=/usr/local/cuda-$CUDA_VERSION/bin:${PATH}
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/local/cuda-$CUDA_VERSION/lib64:${LD_LIBRARY_PATH}
+```
+
+reboot your bash. Check your cuda install is successed or not 
+
+```
+nvcc --version
+### you will see something like:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2018 NVIDIA Corporation
+Built on Sat_Aug_25_21:08:01_CDT_2018
+Cuda compilation tools, release 10.0, V10.0.130
+```
+
+
+
 ## Install zed sdk
 down load zed sdk from https://www.stereolabs.com/developers/release/2.8/
 install it
