@@ -146,7 +146,7 @@ Things you need to checkout:
 - make sure MODULE path
 - make sure uncheck `codec` of cuda
 
-Then 
+Then click "Generate" ,  after it finished, close cmake-gui and 
 
 ```
 make -j8
