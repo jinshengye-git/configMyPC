@@ -130,11 +130,18 @@ mkdir build
 cd build
 ```
 
-it is better use `cmake-gui` to configure,  
+it is better use `cmake-gui` to configure, suppose you are in folder:  opencv/build/
+
+```
+cmake-gui ..
+```
+Then click button: Configure 
+
+Things you need to checkout:
 
 - make sure python2 python3 for cv2  available...   
 - make sure sfm available
-- make sure CUDA
+- make sure CUDA IS ON
 - make sure NONFREE 
 - make sure MODULE path
 - make sure uncheck `codec` of cuda
