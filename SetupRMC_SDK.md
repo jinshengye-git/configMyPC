@@ -47,7 +47,6 @@ several yaml files need to be put in `~/.rmc-sdk/keycart/res/timsim`
 
 ```
 mkdir -p /home/$USER/.rmc-sdk/keycart/res/timsim
-cp ~/Downloads/timsim.zip ~/.rmc-sdk/keycart/res/timsim
 cd ./.rmc-sdk/keycart/res/timsim
 wget https://github.com/jinshengye-git/configMyPC/blob/master/timsim.zip
 unzip timsim.zip
