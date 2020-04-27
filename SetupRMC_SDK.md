@@ -1,6 +1,6 @@
 ## Before setup
 
-you need install ros-melodic-teb-local-planner, because rmc-sdk is not supporting the github version teb-local-planner.
+you need install `ros-melodic-teb-local-planner`, because rmc-sdk is not supporting the github version teb-local-planner.
 
 ```
 sudo apt install ros-melodic-teb-local-planner
