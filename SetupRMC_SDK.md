@@ -135,7 +135,7 @@ in Server Location input:
 ws://127.0.0.1:8765/keycart
 ```
 
-in Request input following command to send keycart to Goal 1:
+in Request input following command to send keycart to goal-id 1:
 
 ```
 {"header": {"timestamp": 0}, "body": {"command": "start-operation", "args": [{"goal-id": 1}]}}
@@ -146,3 +146,5 @@ by clicking Send button your keycart should move to Goal 1. To stop the keycart:
 ```
 {"header": {"timestamp": 0}, "body": {"command": "emergency-stop", "args": []}}
 ```
+
+you can check ~/.rmc-sdk/keycart/res/timsim/path.yaml  to confirm how many goal id you can choose.
