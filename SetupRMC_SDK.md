@@ -56,7 +56,13 @@ cd ~
 
 ## Make a soft-link of TimSim.sh
 
-make a soft link of your TimSim.sh, depends on where you put your TimSim.sh. I am doing here is my way, you should do according to your case.
+Make sure TimSim is in your `catkin_ws/src`  folder. if not:
+```
+roscd
+cd ../src
+git clone https://github.com/SeaosRobotics/TimSim.git
+```
+and configure TimSim according to the instruction on [TimSim.git](https://github.com/SeaosRobotics/TimSim). Then make a soft link of your TimSim.sh, depends on where you put your TimSim.sh. I am doing here is my way, you should do according to your case.
 
 ```
 roscd timsim
