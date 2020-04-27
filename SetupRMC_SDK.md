@@ -92,16 +92,11 @@ Followings are pkgs I have as well, please set branch properly as well. Some of 
 - turtlebot3_msgs
 - zed-ros-wrapper      
 
-
-then ```catkin_make```
+then you need ```catkin_make```
 
 ## install Chrome Extension on your Browser
 
-Go to Chrome App Web Store and Search: Simple WebSocket Client
-install it.
-
-
-
+Go to Chrome App Web Store and Search: **Simple WebSocket Client** and install it.
 
 ## Run 
 
@@ -147,4 +142,4 @@ by clicking Send button your keycart should move to Goal 1. To stop the keycart:
 {"header": {"timestamp": 0}, "body": {"command": "emergency-stop", "args": []}}
 ```
 
-you can check ~/.rmc-sdk/keycart/res/timsim/path.yaml  to confirm how many goal id you can choose.
+you can check `~/.rmc-sdk/keycart/res/timsim/path.yaml`  to confirm how many goal id you can choose.
