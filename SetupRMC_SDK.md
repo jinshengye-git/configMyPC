@@ -124,6 +124,7 @@ try to find the echo message with blue font, something like:
 
 **[2020/4/27 13:5:53.540] [DBG] [WebsocketsKeycart::server::317]: server will start on  127.0.0.1 8765**
 
+on your case, this **127.0.0.1 8765** might be different IP/port number.
 
 then click the Simple WebSocket Client  button on your Chrome Browser.
 
