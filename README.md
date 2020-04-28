@@ -6,14 +6,16 @@ this instruction is based on assuming you have this folder.
 
 
 # configMyPC
+
 things to do after install Ubuntu 18.04
 
 # Things to prepare working environment on your PC
 
-## First change Nvidia Driver and Reboot PC
-Just do it .
+## Setup Nvidia Driver and Reboot PC
 
-## copy all config files
+Activities --> Software & Updates --> Additional Drivers --> Using Nvidia driver metapackage from nvidia-driver-440 (open source/proprietary) --> Apply Changes --> reboot PC
+
+## copy all config files (optional)
 
 go to path you save the files
 
@@ -35,7 +37,7 @@ sudo snap install ttyplot
 sudo apt autoremove
 sudo reboot
 ```
-## Install Tex
+## Install Tex (optional)
 ```
 sudo apt -y install texlive-full
 ```
@@ -70,7 +72,7 @@ export PATH=/usr/local/cuda-$CUDA_VERSION/bin:${PATH}
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/local/cuda-$CUDA_VERSION/lib64:${LD_LIBRARY_PATH}
 ```
 
-reboot your bash. Check your cuda install is successed or not 
+reopen your bash terminal. Check your cuda install is successed or not 
 
 ```
 nvcc --version
@@ -196,7 +198,7 @@ sudo mv /usr/local/lib/cmake/Findcvsba.cmake /usr/local/lib/cmake/cvsba/cvsbaCon
 
 
 
-## Install Sublime Text
+## Install Sublime Text (optional)
 ```
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https
@@ -205,7 +207,7 @@ sudo apt-get update
 sudo apt-get install sublime-text
 ```
 
-## Install zsh
+## Install zsh (optional)
 ```
 sudo apt -y install curl
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
