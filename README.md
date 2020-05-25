@@ -279,7 +279,13 @@ sudo apt -y install python-rosdep libbtf1 libcxsparse3 libgraphblas1 libklu1 lib
 sudo rosdep init
 rosdep update
 mkdir -p ~/catkin_ws/src
-cd catkin_ws
+cd catkin_ws/src
+
+git clone https://github.com/ros-perception/vision_opencv.git
+cd vision_opencv
+git checkout melodic
+
+
 catkin_make
 sudo apt -y install pyqt5-dev-tools
 sudo apt -y install ros-melodic-urdf ros-melodic-roslint ros-melodic-robot-pose-ekf ros-melodic-image-transport 
