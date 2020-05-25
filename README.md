@@ -284,7 +284,7 @@ cd catkin_ws/src
 git clone https://github.com/ros-perception/vision_opencv.git
 cd vision_opencv
 git checkout melodic
-
+cd ../..
 
 catkin_make
 sudo apt -y install pyqt5-dev-tools
