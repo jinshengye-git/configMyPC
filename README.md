@@ -244,7 +244,7 @@ make
 sudo make install
 
 
-https://github.com/ethz-asl/libpointmatcher.git
+git clone https://github.com/ethz-asl/libpointmatcher.git
 cd libpointmatcher
 mkdir build && cd build
 cmake ..
