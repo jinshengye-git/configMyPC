@@ -165,7 +165,8 @@ sudo make install
 
 ## install g2o
 ```
-git clone https://github.com/SeaosRobotics/g2o.git 
+sudo apt install libsuitesparse-dev
+https://github.com/RainerKuemmerle/g2o.git 
 cd g2o
 mkdir build
 cd build
