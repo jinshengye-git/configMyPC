@@ -312,7 +312,7 @@ make sure your g2o is from official, and cmake g2o with proper settings.
 ```
 sudo apt install libsuitesparse-dev
 cd ~/app
-https://github.com/RainerKuemmerle/g2o.git 
+git clone https://github.com/RainerKuemmerle/g2o.git 
 cd g2o
 mkdir build
 cd build
