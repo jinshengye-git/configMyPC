@@ -163,17 +163,7 @@ make -j8
 sudo make install
 ```
 
-## install g2o
-```
-sudo apt install libsuitesparse-dev
-https://github.com/RainerKuemmerle/g2o.git 
-cd g2o
-mkdir build
-cd build
-cmake -DBUILD_WITH_MARCH_NATIVE=OFF -DG2O_BUILD_APPS=OFF -DG2O_BUILD_EXAMPLES=OFF -DG2O_USE_OPENGL=OFF ..
-make -j4
-sudo make install
-```
+
 
 ## install GTSAM
 
@@ -252,20 +242,6 @@ cmake ..
 make
 sudo make install
 ```
-## install RtabMap
-
-```
-git clone https://github.com/SeaosRobotics/rtabmap.git
-cd rtabmap
-mkdir build
-cd build
-cmake ..
-
-# make sure your CSPARSE_INCLUDE_DIR is set to /home/s-jin/app/g2o/EXTERNAL/csparse
-
-make -j8
-sudo make install
-```
 
 
 ## Install ROS
@@ -325,18 +301,35 @@ python setup.py bdist_egg --exclude-source-files
 
 How to fix teb_local_planner install on HostPC
 
-
+1. install Suitesparse-dev 
 ```
 sudo apt install libsuitesparse-dev
 ```
+2. compile and install Official G2O
 
 make sure your g2o is from official, and cmake g2o with proper settings.
 
+```
+sudo apt install libsuitesparse-dev
+https://github.com/RainerKuemmerle/g2o.git 
+cd g2o
+mkdir build
+cd build
+cmake -DBUILD_WITH_MARCH_NATIVE=OFF -DG2O_BUILD_APPS=OFF -DG2O_BUILD_EXAMPLES=OFF -DG2O_USE_OPENGL=OFF ..
+make -j4
+sudo make install
+```
+
+3. go to teb_local_planner folder
+
+replace FindG2O.cmake file:  
+
+```
+cp ~/app/g2o/cmake_modules/FindG2O.cmake  ~/catkin_ws/src/teb_local_planner/cmake_modules/FindG2O.cmake
+```
 
 
-go to teb_local_planner/
-
-edit CMakeLists.txt
+edit teb_local_planner/CMakeLists.txt
 
 comment out following parts:
 
@@ -348,18 +341,32 @@ target_link_libraries(test_optim_node
    ${EXTERNAL_LIBS}
    ${catkin_LIBRARIES}
 )
-```
 
-and 
 
-```
 install(TARGETS test_optim_node
    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 ```
 
-then
+and then
 
 ```
 catkin_make
+```
+
+
+
+## install RtabMap
+
+```
+git clone https://github.com/SeaosRobotics/rtabmap.git
+cd rtabmap
+mkdir build
+cd build
+cmake ..
+
+# make sure your CSPARSE_INCLUDE_DIR is set to /home/s-jin/app/g2o/EXTERNAL/csparse
+
+make -j8
+sudo make install
 ```
