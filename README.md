@@ -311,6 +311,7 @@ make sure your g2o is from official, and cmake g2o with proper settings.
 
 ```
 sudo apt install libsuitesparse-dev
+cd ~/app
 https://github.com/RainerKuemmerle/g2o.git 
 cd g2o
 mkdir build
@@ -318,6 +319,7 @@ cd build
 cmake -DBUILD_WITH_MARCH_NATIVE=OFF -DG2O_BUILD_APPS=OFF -DG2O_BUILD_EXAMPLES=OFF -DG2O_USE_OPENGL=OFF ..
 make -j4
 sudo make install
+cd ~
 ```
 
 3. go to teb_local_planner folder
