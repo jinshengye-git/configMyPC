@@ -31,11 +31,16 @@ cp .rosrc ~/
 ## Install useful things
 ```
 sudo apt update
-sudo apt -y install git git-lfs cmake cmake-gui zsh snap vim htop tmux gimp gawk build-essential dkms
+sudo apt -y install  cmake cmake-gui zsh snap vim htop tmux gimp gawk build-essential dkms
 sudo apt upgrade
 sudo snap install ttyplot
 sudo apt autoremove
 sudo reboot
+```
+## Install git
+```
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt install git git-lfs
 ```
 ## Install Tex (optional)
 ```
