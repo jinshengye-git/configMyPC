@@ -160,7 +160,7 @@ Things you need to checkout:
 - make sure MODULE path  e.g.   /home/$USER/opencv_contrib/modules
 - make sure uncheck `codec` of cuda
 - make sure WITH_QT  ON
-- make sure WITH_OPENGL ON
+- make sure WITH_OPENGL OFF
 Then click "Generate" ,  after it finished, close cmake-gui and 
 
 ```
