@@ -263,6 +263,7 @@ sudo apt -y install ros-melodic-ros-base
 sudo apt -y install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
 sudo apt -y install python-rosdep libbtf1 libcxsparse3 libgraphblas1 libklu1 libldl2 librbio2 libspqr2 libsuitesparse-dev 
 sudo pip3 install catkin_pkg
+sudo apt install -y python3-catkin-pkg
 sudo rosdep init
 rosdep update
 mkdir -p ~/catkin_ws/src
