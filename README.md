@@ -262,6 +262,7 @@ sudo apt update
 sudo apt -y install ros-melodic-ros-base
 sudo apt -y install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
 sudo apt -y install python-rosdep libbtf1 libcxsparse3 libgraphblas1 libklu1 libldl2 librbio2 libspqr2 libsuitesparse-dev 
+sudo pip3 install catkin_pkg
 sudo rosdep init
 rosdep update
 mkdir -p ~/catkin_ws/src
@@ -293,8 +294,12 @@ roscd
 cd ../src
 git clone https://github.com/GT-RAIL/robot_pose_publisher.git
 cd ..
-catkin_make
+catkin_make 
+```
+If you want to use python3 
 
+```
+catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
 ```
 
 ## install logger
