@@ -57,22 +57,26 @@ wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/c
 sudo dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
 sudo apt update
 sudo apt upgrade
-sudo apt -y install cuda-10-0
+sudo apt -y install cuda-10-2
 sudo reboot
 #after reboot install cuDNN and TensorRT
 wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
 sudo apt -y install ./nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
 sudo apt update
-sudo apt -y install libcudnn7 libcudnn7-dev
+sudo apt -y install libcudnn8 libcudnn8-dev
 sudo apt -y install nvinfer-runtime-trt-repo-ubuntu1804-5.0.2-ga-cuda10.0
 sudo apt update
 sudo apt -y install -y --no-install-recommends libnvinfer-dev
+sudo apt-mark hold cuda-10-2 libcudnn8 libcudnn8-dev libnvinfer7 libnvinfer-dev libnvinfer-plugin7 libnvinfer-plugin-dev cuda-repo-ubuntu1804
+dpkg --get-selections|grep hold
+
+
 nvidia-smi
 ```
 then add these lines to your .bashrc or  other  bash environment config files
 
 ```
-CUDA_VERSION=10.0
+CUDA_VERSION=10.2
 export PATH=/usr/local/cuda-$CUDA_VERSION/bin:${PATH}
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/local/cuda-$CUDA_VERSION/lib64:${LD_LIBRARY_PATH}
 ```
