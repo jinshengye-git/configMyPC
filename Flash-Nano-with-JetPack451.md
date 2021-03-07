@@ -7,7 +7,7 @@ However I tried to flash with many versions of images provided by [NVIDIA-AI-IOT
 I cannot flash images properly on sd card.
 
 
-The Main issue is Nano **cannot be boot up, even can not see the Nvidia logo, monitor has no signal**.  (FYI, my jetson nano is the first released version.)
+The Main issue is Nano **cannot boot up, even can not see the Nvidia logo, monitor has no signal**.  (FYI, my jetson nano is the first released version.)
 
 
 So I tried to use [SDK Manager](https://developer.nvidia.com/nvidia-sdk-manager) ([Instructions of SDK Manager](http://docs.nvidia.com/sdk-manager/download-run-sdkm/index.html)) to flash. The Latest SDK Manager provides JetPack 4.5.1.
