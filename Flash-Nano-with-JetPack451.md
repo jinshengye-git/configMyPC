@@ -44,3 +44,49 @@ and connect micro USB cable on your host PC, you will see your Nano PowerOn LED 
 
 1. setup [Desktop Share and Vino](https://qiita.com/iwatake2222/items/a3bd8d0527dec431ef0f). 
 2. install zsh, oh-my-zsh, powerline fonts
+
+### set up Display of VNC
+following the instructions [here](https://devtalk.nvidia.com/default/topic/995621/jetson-tx1/jetson-tx1-desktop-sharing-resolution-problem-without-real-monitor/) Edit the /etc/X11/xorg.conf file like :
+
+```sudo vim /etc/X11/xorg.conf```
+
+```
+# Copyright (c) 2011-2013 NVIDIA CORPORATION.  All Rights Reserved.
+
+#
+# This is the minimal configuration necessary to use the Tegra driver.
+# Please refer to the xorg.conf man page for more configuration
+# options provided by the X server, including display-related options
+# provided by RandR 1.2 and higher.
+
+# Disable extensions not useful on Tegra.
+Section "Module"
+    Disable     "dri"
+    SubSection  "extmod"
+        Option  "omit xfree86-dga"
+    EndSubSection
+EndSection
+
+Section "Device"
+    Identifier  "Tegra0"
+    Driver      "nvidia"
+# Allow X server to be started even if no display devices are connected.
+    Option      "AllowEmptyInitialConfiguration" "true"
+EndSection
+
+
+Section "Monitor"
+   Identifier "DSI-0"
+   Option    "Ignore"
+EndSection
+
+Section "Screen"
+   Identifier    "Default Screen"
+   Monitor        "Configured Monitor"
+   Device        "Default Device"
+   SubSection "Display"
+       Depth    24
+       Virtual 1280 800
+   EndSubSection
+EndSection
+```
