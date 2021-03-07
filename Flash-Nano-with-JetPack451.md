@@ -5,10 +5,10 @@ Trying to flash nano as Jetbot OS,
 However I tried to flash with many versions of images provided by [NVIDIA-AI-IOT/jetbot](https://github.com/NVIDIA-AI-IOT/jetbot/wiki/software-setup)
 
 I cannot flash images properly on sd card.
-
-
 The Main issue is Nano **cannot boot up, even can not see the Nvidia logo, monitor has no signal**.  (FYI, my jetson nano is the first released version.)
 
+**[Update:]**
+By following [WaveShare Wiki](https://www.waveshare.com/wiki/JetBot_AI_Kit),  Flash on SD card is working!!!!
 
 So I tried to use [SDK Manager](https://developer.nvidia.com/nvidia-sdk-manager) ([Instructions of SDK Manager](http://docs.nvidia.com/sdk-manager/download-run-sdkm/index.html)) to flash. The Latest SDK Manager provides JetPack 4.5.1.
 
