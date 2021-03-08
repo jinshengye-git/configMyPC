@@ -140,9 +140,9 @@ mkdir app  &&  cd app
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 cd opencv
-git checkout 3.4.6
+git checkout 4.1.1
 cd ../opencv_contrib
-git checkout 3.4.6
+git checkout 4.1.1
 cd ../opencv
 mkdir build
 cd build
