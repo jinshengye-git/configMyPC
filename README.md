@@ -99,31 +99,27 @@ down load zed sdk from https://www.stereolabs.com/developers/release/2.8/
 choose the correct version of CUDA and your Ubuntu then
 install it
 
-## Install OpenCV 3.4.6
+## Install OpenCV 4.1.1
 
 ```
-sudo apt -y remove x264 libx264-dev
-sudo apt autoremove
-sudo apt -y install checkinstall pkg-config yasm gfortran
+sudo apt -y install checkinstall pkg-config yasm gfortran mlocate
 sudo apt -y install libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
-sudo apt -y install libjpeg8-dev libjasper-dev libpng12-dev
+sudo apt -y install libjpeg9-dev  libpng-dev
 sudo apt -y install libtiff5-dev
-sudo apt -y install libtiff-dev
 sudo apt -y install libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
 sudo apt -y install libxine2-dev libv4l-dev
-sudo apt -y install libgtk2.0-dev libtbb-dev qt5-default
+sudo apt -y install  libtbb-dev qt5-default
 sudo apt -y install libatlas-base-dev
 sudo apt -y install libfaac-dev libmp3lame-dev libtheora-dev
 sudo apt -y install libvorbis-dev libxvidcore-dev
 sudo apt -y install libopencore-amrnb-dev libopencore-amrwb-dev
 sudo apt -y install libavresample-dev
 sudo apt -y install x264 v4l-utils
-sudo apt -y install libprotobuf-dev protobuf-compiler
-sudo apt -y install libgoogle-glog-dev libgflags-dev
+sudo apt -y install libgflags-dev
 sudo apt -y install libgphoto2-dev libeigen3-dev libhdf5-dev doxygen
-sudo apt -y install python3-dev python3-pip python3-venv python-dev python-pip
+sudo apt -y install python3-dev python3-venv python-dev 
 sudo apt -y install libopenblas-dev libopenblas-base
-sudo apt -y install libgtk-3-dev
+sudo apt -y install python3-pip libgtk-3-dev python-pip
 sudo -H pip install numpy
 sudo -H pip3 install numpy
 sudo -H pip3 install cython
@@ -133,7 +129,11 @@ sudo apt -y install libpcl-dev
 sudo apt -y install libboost-all-dev
 sudo apt -y install libproj-dev
 sudo apt -y install libqt5svg5-dev
-sudo apt -y install libvtk6-qt-dev
+sudo apt -y install libbtf1 libcxsparse3 libgraphblas1 libklu1 libldl2 librbio2 libspqr2 
+sudo apt-get install libeigen3-dev libgflags-dev libgoogle-glog-dev
+sudo apt-get install libsuitesparse-dev
+sudo ldconfig
+zsh
 
 cd ~
 mkdir app  &&  cd app
@@ -158,7 +158,7 @@ Then click button: Configure
 Things you need to checkout:
 
 - make sure python2 python3 for cv2  available...   
-- make sure sfm available
+- make sure sfm available (sudo apt-get install libeigen3-dev libgflags-dev libgoogle-glog-dev)
 - make sure CUDA IS ON
 - make sure NONFREE 
 - make sure MODULE path  e.g.   /home/$USER/opencv_contrib/modules
@@ -167,6 +167,37 @@ Things you need to checkout:
 - make sure WITH_OPENGL OFF
 Then click "Generate" ,  after it finished, close cmake-gui and 
 
+**NOTE for the ERROR of : Cannot Find Eigen3:**
+```
+in cmake-gui click "add entry"
+then a in the pop up:
+"name:" EIGEN_INCLUDE_PATH"
+"type":PATH
+"value": /usr/include/eigen3
+```
+Then configure and generate, that should fix it.
+
+**NOTE: for not supporting later than gcc8:**
+we change default gcc as 8.
+```
+sudo apt -y install gcc-7 g++-7 gcc-8 g++-8 gcc-9 g++-9
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 8
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
+```
+
+**For the error:**
+```
+In file included from <command-line>:
+/sources/opencv-4.1.1/build_haiku/modules/dnn/test_precomp.hpp:50:10: fatal error: test_common.hpp: No such file or directory
+ #include "test_common.hpp"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+```
+
+Disable precompiled headers: `ENABLE_PRECOMPILED_HEADERS=OFF` (disabled by default on master branch)
+
+
+Then make install
 ```
 make -j8
 sudo make install
