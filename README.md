@@ -27,26 +27,26 @@ cp .zshrc ~/
 cp .ros_sim ~/
 cp .rosrc ~/
 ```
-
-## Install useful things
-```
-sudo apt update
-sudo apt -y install  cmake cmake-gui zsh snap vim htop tmux gimp gawk build-essential dkms
-sudo apt upgrade
-sudo snap install ttyplot
-sudo apt autoremove
-sudo reboot
-```
 ## Install git
 ```
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt install git git-lfs
 ```
+
+## Install useful things
+```
+sudo apt update
+sudo apt -y install  cmake cmake-gui zsh snap vim htop terminator gimp gawk build-essential dkms ccze
+sudo apt upgrade
+sudo snap install ttyplot
+sudo apt autoremove
+sudo reboot
+```
+
 ## Install Tex (optional)
 ```
 sudo apt -y install texlive-full
 ```
-
 
 ## Install CUDA and  cuDNN and TensorRT
 
@@ -58,7 +58,7 @@ sudo dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
 sudo apt update
 sudo apt upgrade
 sudo apt -y install cuda-10-2
-sudo reboot
+
 #after reboot install cuDNN and TensorRT
 wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
 sudo apt -y install ./nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
@@ -69,7 +69,6 @@ sudo apt update
 sudo apt -y install -y --no-install-recommends libnvinfer-dev
 sudo apt-mark hold cuda-10-2 libcudnn8 libcudnn8-dev libnvinfer7 libnvinfer-dev libnvinfer-plugin7 libnvinfer-plugin-dev cuda-repo-ubuntu1804
 dpkg --get-selections|grep hold
-
 
 nvidia-smi
 ```
@@ -91,7 +90,6 @@ Copyright (c) 2005-2018 NVIDIA Corporation
 Built on Sat_Aug_25_21:08:01_CDT_2018
 Cuda compilation tools, release 10.0, V10.0.130
 ```
-
 
 
 ## Install zed sdk 2.8.5
