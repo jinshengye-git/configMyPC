@@ -75,7 +75,6 @@ install it
 sudo apt -y install checkinstall pkg-config yasm gfortran mlocate
 sudo apt -y install libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
 sudo apt -y install libjpeg9-dev  libpng-dev
-sudo apt -y install libtiff5-dev
 sudo apt -y install libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
 sudo apt -y install libxine2-dev libv4l-dev
 sudo apt -y install  libtbb-dev qt5-default
