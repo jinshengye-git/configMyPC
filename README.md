@@ -15,18 +15,6 @@ things to do after install Ubuntu 18.04
 
 Activities --> Software & Updates --> Additional Drivers --> Using Nvidia driver metapackage from nvidia-driver-440 (open source/proprietary) --> Apply Changes --> reboot PC
 
-## copy all config files (optional)
-
-go to path you save the files
-
-```
-cp .st-ke* ~/
-cp .hostpc ~/
-cp .source* ~/
-cp .zshrc ~/
-cp .ros_sim ~/
-cp .rosrc ~/
-```
 ## Install git
 ```
 sudo add-apt-repository ppa:git-core/ppa
