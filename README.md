@@ -24,8 +24,8 @@ sudo apt install git git-lfs
 ## Install useful things
 ```
 sudo apt update
-sudo apt -y install  cmake cmake-gui zsh snap vim htop terminator gimp gawk build-essential dkms ccze
 sudo apt upgrade
+sudo apt -y install  cmake cmake-gui zsh snap vim htop terminator gimp gawk build-essential dkms ccze
 sudo snap install ttyplot
 sudo apt autoremove
 ```
