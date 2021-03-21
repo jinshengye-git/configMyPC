@@ -28,7 +28,6 @@ sudo apt -y install  cmake cmake-gui zsh snap vim htop terminator gimp gawk buil
 sudo apt upgrade
 sudo snap install ttyplot
 sudo apt autoremove
-sudo reboot
 ```
 
 ## Install Tex (optional)
