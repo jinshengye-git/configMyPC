@@ -38,7 +38,8 @@ sudo apt update
 sudo apt upgrade
 sudo apt -y install freeglut3 freeglut3-dev libxi-dev libxmu-dev
 sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
-sudo apt -y install cuda-10-2
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-11-1_11.1.1-1_amd64.deb
+sudo apt -y install cuda-11-1
 sudo apt -y install libcudnn8 libcudnn8-dev
 sudo apt -y install -y --no-install-recommends libnvinfer-dev
 sudo apt-mark hold cuda-10-2 libcudnn8 libcudnn8-dev libnvinfer7 libnvinfer-dev libnvinfer-plugin7 libnvinfer-plugin-dev cuda-repo-ubuntu1804
