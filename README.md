@@ -73,37 +73,6 @@ install it
 ## Install OpenCV 4.1.1
 
 ```
-sudo apt -y install checkinstall pkg-config yasm gfortran mlocate
-sudo apt -y install libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
-sudo apt -y install libjpeg9-dev  libpng-dev
-sudo apt -y install libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
-sudo apt -y install libxine2-dev libv4l-dev
-sudo apt -y install  libtbb-dev qt5-default
-sudo apt -y install libatlas-base-dev
-sudo apt -y install libfaac-dev libmp3lame-dev libtheora-dev
-sudo apt -y install libvorbis-dev libxvidcore-dev
-sudo apt -y install libopencore-amrnb-dev libopencore-amrwb-dev
-sudo apt -y install libavresample-dev
-sudo apt -y install x264 v4l-utils
-sudo apt -y install libgflags-dev
-sudo apt -y install libgphoto2-dev libeigen3-dev libhdf5-dev doxygen
-sudo apt -y install python3-dev python3-venv python-dev 
-sudo apt -y install libopenblas-dev libopenblas-base
-sudo apt -y install python3-pip libgtk-3-dev python-pip
-sudo -H pip install numpy
-sudo -H pip3 install numpy
-sudo -H pip3 install cython
-sudo -H pip install cython
-sudo apt -y install libsqlite3-dev
-sudo apt -y install libpcl-dev
-sudo apt -y install libboost-all-dev
-sudo apt -y install libproj-dev
-sudo apt -y install libqt5svg5-dev
-sudo apt -y install libbtf1 libcxsparse3 libgraphblas1 libklu1 libldl2 librbio2 libspqr2 
-sudo apt-get install libeigen3-dev libgflags-dev libgoogle-glog-dev
-sudo apt-get install libsuitesparse-dev
-sudo ldconfig
-zsh
 
 cd ~
 mkdir app  &&  cd app
