@@ -121,50 +121,19 @@ down load zed sdk from https://www.stereolabs.com/developers/release/2.8/
 choose the correct version of CUDA and your Ubuntu then
 install it
 
-## Install OpenCV 3.4.6
+## Install OpenCV 4.2.0
 
 ```
-sudo apt -y remove x264 libx264-dev
-sudo apt autoremove
-sudo apt -y install checkinstall pkg-config yasm gfortran
-sudo apt -y install libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
-sudo apt -y install libjpeg8-dev libjasper-dev libpng12-dev
-sudo apt -y install libtiff5-dev
-sudo apt -y install libtiff-dev
-sudo apt -y install libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
-sudo apt -y install libxine2-dev libv4l-dev
-sudo apt -y install libgtk2.0-dev libtbb-dev qt5-default
-sudo apt -y install libatlas-base-dev
-sudo apt -y install libfaac-dev libmp3lame-dev libtheora-dev
-sudo apt -y install libvorbis-dev libxvidcore-dev
-sudo apt -y install libopencore-amrnb-dev libopencore-amrwb-dev
-sudo apt -y install libavresample-dev
-sudo apt -y install x264 v4l-utils
-sudo apt -y install libprotobuf-dev protobuf-compiler
-sudo apt -y install libgoogle-glog-dev libgflags-dev
-sudo apt -y install libgphoto2-dev libeigen3-dev libhdf5-dev doxygen
-sudo apt -y install python3-dev python3-pip python3-venv python-dev python-pip
-sudo apt -y install libopenblas-dev libopenblas-base
-sudo apt -y install libgtk-3-dev
-sudo -H pip install numpy==1.19
-sudo -H pip3 install numpy==1.19
-sudo -H pip3 install cython
-sudo -H pip install cython
-sudo apt -y install libsqlite3-dev
-sudo apt -y install libpcl-dev
-sudo apt -y install libboost-all-dev
-sudo apt -y install libproj-dev
-sudo apt -y install libqt5svg5-dev
-sudo apt -y install libvtk6-qt-dev
+sudo apt -y install zlib1g-dev libcurl4-gnutls-dev build-essential libtool texinfo dpkg-dev pkg-config qt5-qmake  openni2-utils libopenni2-dev libpcl-dev libguava-java python3-dev pylint flake8 python3-flake8  libleveldb-dev liblmdb-dev  libatlas-base-dev libopenblas-dev liblapack-dev libtbb-dev libeigen3-dev
 
 cd ~
 mkdir app  &&  cd app
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 cd opencv
-git checkout 3.4.6
+git checkout 4.2.0
 cd ../opencv_contrib
-git checkout 3.4.6
+git checkout 4.2.0
 cd ../opencv
 mkdir build
 cd build
