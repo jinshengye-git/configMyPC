@@ -38,23 +38,23 @@ sudo apt -y install texlive-full
 ## Install CUDA and  cuDNN and TensorRT
 
 ```
-sudo wget -O /etc/apt/preferences.d/cuda-repository-pin-600 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
-sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
-sudo add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
+sudo apt -y install freeglut3 freeglut3-dev libxi-dev libxmu-dev
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
+sudo apt update
+sudo apt upgrade
 sudo apt -y install cuda-10-2
 
-export CUDA_PATH=/usr/local/cuda-10.2
-echo 'export CUDA_PATH=/usr/local/cuda-10.2' >> ${HOME}/.bashrc
-echo 'export CUDA_PATH=/usr/local/cuda-10.2' >> ${HOME}/.zshrc
-export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:${LD_LIBRARY_PATH}
-echo 'export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:${LD_LIBRARY_PATH}' >> ${HOME}/.bashrc
-echo 'export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:${LD_LIBRARY_PATH}' >> ${HOME}/.zshrc
-export PATH=/usr/local/cuda-10.2/bin:${PATH}
-echo 'export PATH=/usr/local/cuda-10.2/bin:${PATH}' >> ${HOME}/.bashrc
-echo 'export PATH=/usr/local/cuda-10.2/bin:${PATH}' >> ${HOME}/.zshrc
-
-dpkg -l | grep cuda | sudo apt-mark
-
+#after reboot install cuDNN and TensorRT
+wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+sudo apt -y install ./nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+sudo apt update
+sudo apt -y install libcudnn8 libcudnn8-dev
+sudo apt -y install nvinfer-runtime-trt-repo-ubuntu1804-5.0.2-ga-cuda10.0
+sudo apt update
+sudo apt -y install -y --no-install-recommends libnvinfer-dev
+sudo apt-mark hold cuda-10-2 libcudnn8 libcudnn8-dev libnvinfer7 libnvinfer-dev libnvinfer-plugin7 libnvinfer-plugin-dev cuda-repo-ubuntu1804
 dpkg --get-selections|grep hold
 
 nvidia-smi
@@ -84,18 +84,50 @@ down load zed sdk from https://www.stereolabs.com/developers/release/2.8/
 choose the correct version of CUDA and your Ubuntu then
 install it
 
-## Install OpenCV 4.2.0
+## Install OpenCV 3.4.6
 
 ```
-sudo apt -y install zlib1g-dev libcurl4-gnutls-dev build-essential libtool texinfo dpkg-dev pkg-config qt5-qmake  openni2-utils libopenni2-dev libpcl-dev libguava-java python3-dev pylint flake8 python3-flake8  libleveldb-dev liblmdb-dev  libatlas-base-dev libopenblas-dev liblapack-dev libtbb-dev libeigen3-dev libsuitesparse-dev
+sudo apt -y remove x264 libx264-dev
+sudo apt autoremove
+sudo apt -y install checkinstall pkg-config yasm gfortran
+sudo apt -y install libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
+sudo apt -y install libjpeg8-dev libjasper-dev libpng12-dev
+sudo apt -y install libtiff5-dev
+sudo apt -y install libtiff-dev
+sudo apt -y install libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
+sudo apt -y install libxine2-dev libv4l-dev
+sudo apt -y install libgtk2.0-dev libtbb-dev qt5-default
+sudo apt -y install libatlas-base-dev
+sudo apt -y install libfaac-dev libmp3lame-dev libtheora-dev
+sudo apt -y install libvorbis-dev libxvidcore-dev
+sudo apt -y install libopencore-amrnb-dev libopencore-amrwb-dev
+sudo apt -y install libavresample-dev
+sudo apt -y install x264 v4l-utils
+sudo apt -y install libprotobuf-dev protobuf-compiler
+sudo apt -y install libgoogle-glog-dev libgflags-dev
+sudo apt -y install libgphoto2-dev libeigen3-dev libhdf5-dev doxygen
+sudo apt -y install python3-dev python3-pip python3-venv python-dev python-pip
+sudo apt -y install libopenblas-dev libopenblas-base
+sudo apt -y install libgtk-3-dev
+sudo -H pip install numpy==1.19
+sudo -H pip3 install numpy==1.19
+sudo -H pip3 install cython
+sudo -H pip install cython
+sudo apt -y install libsqlite3-dev
+sudo apt -y install libpcl-dev
+sudo apt -y install libboost-all-dev
+sudo apt -y install libproj-dev
+sudo apt -y install libqt5svg5-dev
+sudo apt -y install libvtk6-qt-dev
+
 cd ~
 mkdir app  &&  cd app
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 cd opencv
-git checkout 4.2.0
+git checkout 3.4.6
 cd ../opencv_contrib
-git checkout 4.2.0
+git checkout 3.4.6
 cd ../opencv
 mkdir build
 cd build
