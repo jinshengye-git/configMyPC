@@ -124,8 +124,7 @@ install it
 ## Install OpenCV 4.2.0
 
 ```
-sudo apt -y install zlib1g-dev libcurl4-gnutls-dev build-essential libtool texinfo dpkg-dev pkg-config qt5-qmake  openni2-utils libopenni2-dev libpcl-dev libguava-java python3-dev pylint flake8 python3-flake8  libleveldb-dev liblmdb-dev  libatlas-base-dev libopenblas-dev liblapack-dev libtbb-dev libeigen3-dev
-
+sudo apt -y install zlib1g-dev libcurl4-gnutls-dev build-essential libtool texinfo dpkg-dev pkg-config qt5-qmake  openni2-utils libopenni2-dev libpcl-dev libguava-java python3-dev pylint flake8 python3-flake8  libleveldb-dev liblmdb-dev  libatlas-base-dev libopenblas-dev liblapack-dev libtbb-dev libeigen3-dev libsuitesparse-dev
 cd ~
 mkdir app  &&  cd app
 git clone https://github.com/opencv/opencv.git
