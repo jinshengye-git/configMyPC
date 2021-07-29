@@ -38,59 +38,22 @@ sudo apt -y install texlive-full
 ## Install CUDA and  cuDNN and TensorRT
 
 ```
-sudo wget -O /etc/apt/preferences.d/cuda-repository-pin-600 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
-sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
-sudo add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
-sudo apt -y install cuda-11-0
+sudo wget -O /etc/apt/preferences.d/cuda-repository-pin-600 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
+sudo apt -y install cuda-10-2
 
-export CUDA_PATH=/usr/local/cuda-11.0
-echo 'export CUDA_PATH=/usr/local/cuda-11.0' >> ${HOME}/.bashrc
-echo 'export CUDA_PATH=/usr/local/cuda-11.0' >> ${HOME}/.zshrc
-export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64:${LD_LIBRARY_PATH}
-echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64:${LD_LIBRARY_PATH}' >> ${HOME}/.bashrc
-echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64:${LD_LIBRARY_PATH}' >> ${HOME}/.zshrc
-export PATH=/usr/local/cuda-11.0/bin:${PATH}
-echo 'export PATH=/usr/local/cuda-11.0/bin:${PATH}' >> ${HOME}/.bashrc
-echo 'export PATH=/usr/local/cuda-11.0/bin:${PATH}' >> ${HOME}/.zshrc
+export CUDA_PATH=/usr/local/cuda-10.2
+echo 'export CUDA_PATH=/usr/local/cuda-10.2' >> ${HOME}/.bashrc
+echo 'export CUDA_PATH=/usr/local/cuda-10.2' >> ${HOME}/.zshrc
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:${LD_LIBRARY_PATH}
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:${LD_LIBRARY_PATH}' >> ${HOME}/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:${LD_LIBRARY_PATH}' >> ${HOME}/.zshrc
+export PATH=/usr/local/cuda-10.2/bin:${PATH}
+echo 'export PATH=/usr/local/cuda-10.2/bin:${PATH}' >> ${HOME}/.bashrc
+echo 'export PATH=/usr/local/cuda-10.2/bin:${PATH}' >> ${HOME}/.zshrc
 
-dpkg -l | grep cuda
-sudo apt-mark hold cuda-11-0                   
-sudo apt-mark hold cuda-command-line-tools-11-0
-sudo apt-mark hold cuda-compiler-11-0          
-sudo apt-mark hold cuda-cudart-11-0            
-sudo apt-mark hold cuda-cudart-dev-11-0        
-sudo apt-mark hold cuda-cuobjdump-11-0         
-sudo apt-mark hold cuda-cupti-11-0             
-sudo apt-mark hold cuda-cupti-dev-11-0         
-sudo apt-mark hold cuda-demo-suite-11-0        
-sudo apt-mark hold cuda-documentation-11-0     
-sudo apt-mark hold cuda-driver-dev-11-0        
-sudo apt-mark hold cuda-drivers                
-sudo apt-mark hold cuda-drivers-470            
-sudo apt-mark hold cuda-gdb-11-0               
-sudo apt-mark hold cuda-libraries-11-0         
-sudo apt-mark hold cuda-libraries-dev-11-0     
-sudo apt-mark hold cuda-memcheck-11-0          
-sudo apt-mark hold cuda-nsight-11-0            
-sudo apt-mark hold cuda-nsight-compute-11-0    
-sudo apt-mark hold cuda-nsight-systems-11-0    
-sudo apt-mark hold cuda-nvcc-11-0              
-sudo apt-mark hold cuda-nvdisasm-11-0          
-sudo apt-mark hold cuda-nvml-dev-11-0          
-sudo apt-mark hold cuda-nvprof-11-0            
-sudo apt-mark hold cuda-nvprune-11-0           
-sudo apt-mark hold cuda-nvrtc-11-0             
-sudo apt-mark hold cuda-nvrtc-dev-11-0         
-sudo apt-mark hold cuda-nvtx-11-0              
-sudo apt-mark hold cuda-nvvp-11-0              
-sudo apt-mark hold cuda-runtime-11-0           
-sudo apt-mark hold cuda-samples-11-0           
-sudo apt-mark hold cuda-sanitizer-11-0         
-sudo apt-mark hold cuda-toolkit-11-0           
-sudo apt-mark hold cuda-tools-11-0             
-sudo apt-mark hold cuda-visual-tools-11-0      
-sudo apt-mark hold libcudnn8                   
-sudo apt-mark hold libcudnn8-dev               
+dpkg -l | grep cuda | sudo apt-mark
 
 dpkg --get-selections|grep hold
 
