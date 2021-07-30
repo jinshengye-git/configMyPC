@@ -296,7 +296,7 @@ catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 ```
 cd ~/app
-git clone https://github.com/SeaosRobotics/logger.git
+git clone git@github.com:SeaosRobotics/logger.git
 cd logger
 python3 setup.py bdist_egg --exclude-source-files
 ```
