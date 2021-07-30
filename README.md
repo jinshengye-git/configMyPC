@@ -54,7 +54,8 @@ sudo apt -y install libcudnn8 libcudnn8-dev
 sudo apt -y install nvinfer-runtime-trt-repo-ubuntu1804-5.0.2-ga-cuda10.0
 sudo apt update
 sudo apt -y install -y --no-install-recommends libnvinfer-dev
-sudo apt-mark hold cuda-10-2 libcudnn8 libcudnn8-dev libnvinfer7 libnvinfer-dev libnvinfer-plugin7 libnvinfer-plugin-dev cuda-repo-ubuntu1804
+dpkg -l |grep cuda
+#sudo apt-mark hold ***
 dpkg --get-selections|grep hold
 
 nvidia-smi
