@@ -298,7 +298,7 @@ catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
 cd ~/app
 git clone https://github.com/SeaosRobotics/logger.git
 cd logger
-python setup.py bdist_egg --exclude-source-files
+python3 setup.py bdist_egg --exclude-source-files
 ```
 
 ## How to fix Teb_Local_Planner
