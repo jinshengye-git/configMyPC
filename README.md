@@ -254,7 +254,8 @@ sudo apt-get install -y python3-rospkg-modules
 
 sudo rosdep init
 rosdep update
-mkdir -p ~/catkin_ws/src
+mkdir -p ~/ros/catkin_ws_rmc/src
+ln -s /home/$USER/ros/catkin_ws_rmc /home/$USER/catkin_ws
 cd catkin_ws/src
 
 git clone https://github.com/ros-perception/vision_opencv.git
