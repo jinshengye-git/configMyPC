@@ -119,7 +119,7 @@ sudo apt -y install libboost-all-dev
 sudo apt -y install libproj-dev
 sudo apt -y install libqt5svg5-dev
 sudo apt -y install libvtk6-qt-dev
-
+sudo apt-get install libsuitesparse-dev
 cd ~
 mkdir app  &&  cd app
 git clone https://github.com/opencv/opencv.git
