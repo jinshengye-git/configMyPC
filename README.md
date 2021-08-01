@@ -289,6 +289,11 @@ cd ../src
 git clone https://github.com/GT-RAIL/robot_pose_publisher.git
 cd ..
 catkin_make 
+roscd
+cd ../src
+git@github.com:ros-simulation/gazebo_ros_pkgs.git
+cd gazebo_ros_pkgs && git checkout melodic-devel; cd ..
+catkin_make
 ```
 If you want to use python3 
 
