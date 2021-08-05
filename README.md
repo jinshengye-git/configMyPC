@@ -50,6 +50,8 @@ wget https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/8.0.1
 sudo dpkg -i libcudnn8_8.2.2.26-1+cuda11.4_amd64.deb
 sudo dpkg -i libcudnn8-dev_8.2.2.26-1+cuda11.4_amd64.deb
 sudo dpkg -i nv-tensorrt-repo-ubuntu2004-cuda11.3-trt8.0.1.6-ga-20210626_1-1_arm64.deb
+
+dpkg -l |grep cuda
 dpkg --get-selections|grep hold
 
 nvidia-smi
