@@ -37,12 +37,19 @@ sudo apt -y install texlive-full
 sudo apt update
 sudo apt upgrade
 sudo apt -y install freeglut3 freeglut3-dev libxi-dev libxmu-dev
-sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
-wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-11-1_11.1.1-1_amd64.deb
-sudo apt -y install cuda-11-1
-sudo apt -y install libcudnn8 libcudnn8-dev
-sudo apt -y install -y --no-install-recommends libnvinfer-dev
-sudo apt-mark hold cuda-10-2 libcudnn8 libcudnn8-dev libnvinfer7 libnvinfer-dev libnvinfer-plugin7 libnvinfer-plugin-dev cuda-repo-ubuntu1804
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
+sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
+sudo apt-get update
+sudo apt-get -y install cuda
+
+wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.2.2/11.4_07062021/Ubuntu20_04-x64/libcudnn8_8.2.2.26-1+cuda11.4_amd64.deb
+wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.2.2/11.4_07062021/Ubuntu20_04-x64/libcudnn8-dev_8.2.2.26-1+cuda11.4_amd64.deb
+wget https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/8.0.1/local_repos/nv-tensorrt-repo-ubuntu2004-cuda11.3-trt8.0.1.6-ga-20210626_1-1_arm64.deb
+sudo dpkg -i libcudnn8_8.2.2.26-1+cuda11.4_amd64.deb
+sudo dpkg -i libcudnn8-dev_8.2.2.26-1+cuda11.4_amd64.deb
+sudo dpkg -i nv-tensorrt-repo-ubuntu2004-cuda11.3-trt8.0.1.6-ga-20210626_1-1_arm64.deb
 dpkg --get-selections|grep hold
 
 nvidia-smi
