@@ -19,7 +19,7 @@ Activities --> Software & Updates --> Additional Drivers --> Using Nvidia driver
 ```
 #to enable ssh of github.
 ssh-keygen
-cat .ssh/isa_pub
+cat .ssh/id_rsa.pub
 #past that to ssh settings of github.
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt install git git-lfs
