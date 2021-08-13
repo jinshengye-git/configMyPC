@@ -50,7 +50,7 @@ fi
 
 sudo mkdir /xavier_ssd
 sudo mount /dev/nvme0n1p1 /xavier_ssd
-sudo chown nvidia:nvidia /xavier_ssd
+sudo chown $USER:$USER /xavier_ssd
 sudo chmod 755 /xavier_ssd
 
 sudo cp /etc/fstab /etc/fstab.bkup
