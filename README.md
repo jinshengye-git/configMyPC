@@ -13,7 +13,7 @@ things to do after install Ubuntu 18.04
 
 ## Setup Nvidia Driver and Reboot PC
 
-Activities --> Software & Updates --> Additional Drivers --> Using Nvidia driver metapackage from nvidia-driver-440 (open source/proprietary) --> Apply Changes --> reboot PC
+Activities --> Software & Updates --> Additional Drivers --> Using Nvidia driver metapackage from nvidia-driver-470 (open source/proprietary , better to use latest tested one) --> Apply Changes --> reboot PC
 
 ## Install git
 ```
