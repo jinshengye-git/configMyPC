@@ -155,6 +155,10 @@ Things you need to checkout:
 - make sure uncheck `codec` of cuda
 - make sure WITH_QT  ON
 - make sure WITH_OPENGL OFF
+- if you got "Eigen/Core can not be found" fatal error,  you can ENABLE_PRECOMPILED_HEADERS=OFF
+
+
+
 Then click "Generate" ,  after it finished, close cmake-gui and 
 
 ```
