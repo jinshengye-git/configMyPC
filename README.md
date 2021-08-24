@@ -89,7 +89,7 @@ down load zed sdk from https://www.stereolabs.com/developers/release/2.8/
 choose the correct version of CUDA and your Ubuntu then
 install it
 
-## Install OpenCV 3.4.6
+## Install OpenCV 4.1.1
 
 ```
 sudo apt -y remove x264 libx264-dev
@@ -130,9 +130,9 @@ mkdir app  &&  cd app
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 cd opencv
-git checkout 3.4.6
+git checkout 4.1.1
 cd ../opencv_contrib
-git checkout 3.4.6
+git checkout 4.1.1
 cd ../opencv
 mkdir build
 cd build
@@ -168,7 +168,7 @@ sudo make install
 
 
 
-## install GTSAM
+## install GTSAM (for Rtabmap)
 
 ```
 git clone --branch 4.0.0-alpha2 https://github.com/borglab/gtsam.git gtsam-4.0.0-alpha2
@@ -180,7 +180,7 @@ make -j4
 sudo make install
 ```
 
-## install cvsba
+## install cvsba (for Rtabmap)
 
 cvsba: Follow installation instructions from [here](http://www.uco.es/investiga/grupos/ava/node/39). 
 Their installation is not standard CMake, you need these extra steps so RTAB-Map can find it: 
@@ -375,7 +375,7 @@ catkin_make
 
 
 
-## install RtabMap
+## install RtabMap (optional)
 
 ```
 git clone https://github.com/SeaosRobotics/rtabmap.git
