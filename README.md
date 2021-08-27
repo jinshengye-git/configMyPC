@@ -33,6 +33,24 @@ sudo apt -y install  cmake cmake-gui zsh snap vim htop terminator gimp gawk buil
 sudo snap install ttyplot
 sudo apt autoremove
 ```
+## Change default terminal
+
+```
+sudo update-alternatives --config x-terminal-emulator
+```
+it will show:
+
+```
+There are 2 choices for the alternative x-terminal-emulator (providing /usr/bin/x-terminal-emulator).
+
+  Selection    Path                             Priority   Status
+------------------------------------------------------------
+* 0            /usr/bin/terminator               50        auto mode
+  1            /usr/bin/gnome-terminal.wrapper   40        manual mode
+  2            /usr/bin/terminator               50        manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: [Enter the number you want here on my case is 2]
+```
 
 ## Install Tex (optional)
 ```
