@@ -35,6 +35,8 @@ sudo apt autoremove
 ```
 ## Change default terminal
 
+use **terminator** as default that opens up with the usual keyboard shortcut of Ctrl+Alt+T.
+
 ```
 sudo update-alternatives --config x-terminal-emulator
 ```
@@ -51,6 +53,16 @@ There are 2 choices for the alternative x-terminal-emulator (providing /usr/bin/
 
 Press <enter> to keep the current choice[*], or type selection number: [Enter the number you want here on my case is 2]
 ```
+### To let mouse right-click open terminal default as terminator
+Then add the following block in .zshrc
+```
+if ps -o cmd= -p $(ps -o ppid= -p $$) | grep -q gnome; then
+   nohup terminator &> /dev/null && exit
+   sleep 0.1s
+   exit
+ fi
+```
+
 
 ## Install Tex (optional)
 ```
