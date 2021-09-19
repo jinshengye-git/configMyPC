@@ -52,7 +52,7 @@ nvidia-smi
 then add these lines to your .bashrc or  other  bash environment config files
 
 ```
-CUDA_VERSION=10.2
+CUDA_VERSION=11.0
 export PATH=/usr/local/cuda-$CUDA_VERSION/bin:${PATH}
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/local/cuda-$CUDA_VERSION/lib64:${LD_LIBRARY_PATH}
 ```
