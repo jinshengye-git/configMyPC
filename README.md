@@ -42,13 +42,8 @@ sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
 sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
 sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
 sudo apt-get update
-sudo apt-get -y install cuda
+sudo apt-get -y install cuda libcudnn8 libcudnn8-dev
 
-wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.2.2/11.4_07062021/Ubuntu20_04-x64/libcudnn8_8.2.2.26-1+cuda11.4_amd64.deb
-wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.2.2/11.4_07062021/Ubuntu20_04-x64/libcudnn8-dev_8.2.2.26-1+cuda11.4_amd64.deb
-wget https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/8.0.1/local_repos/nv-tensorrt-repo-ubuntu2004-cuda11.3-trt8.0.1.6-ga-20210626_1-1_arm64.deb
-sudo dpkg -i libcudnn8_8.2.2.26-1+cuda11.4_amd64.deb
-sudo dpkg -i libcudnn8-dev_8.2.2.26-1+cuda11.4_amd64.deb
 sudo dpkg -i nv-tensorrt-repo-ubuntu2004-cuda11.3-trt8.0.1.6-ga-20210626_1-1_arm64.deb
 
 dpkg -l |grep cuda
