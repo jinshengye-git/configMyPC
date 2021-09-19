@@ -44,8 +44,6 @@ sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/
 sudo apt-get update
 sudo apt-get -y install cuda libcudnn8 libcudnn8-dev libnvinfer-dev
 
-sudo dpkg -i nv-tensorrt-repo-ubuntu2004-cuda11.3-trt8.0.1.6-ga-20210626_1-1_arm64.deb
-
 dpkg -l |grep cuda
 dpkg --get-selections|grep hold
 
