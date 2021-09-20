@@ -114,10 +114,11 @@ Cuda compilation tools, release 10.0, V10.0.130
 ```
 
 
-## Install zed sdk 3.4.2
+## Install zed sdk 3.5.4
 down load zed sdk from https://www.stereolabs.com/developers/release/3.4/
 choose the correct version of CUDA and your Ubuntu then
 install it
+- The ZED Python API was installed for 'python3', when using conda environement or virtualenv, the ZED Python API may need to be resetup to be available (using 'python /usr/local/zed/get_python_api.py')
 
 ## Install OpenCV 4.1.1
 
