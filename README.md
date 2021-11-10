@@ -45,12 +45,14 @@ sudo apt-get -y install cuda
 sudo apt install nvidia-cuda-toolkit
 
 # cuDNN
+# wget might be forbiden by Nvidia...  download via browser
 wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.3.0/11.5_20211101/Ubuntu20_04-x64/libcudnn8_8.3.0.98-1+cuda11.5_amd64.deb
 wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.3.0/11.5_20211101/Ubuntu20_04-x64/libcudnn8-dev_8.3.0.98-1+cuda11.5_amd64.deb
 sudo dpkg -i install libcudnn8_8.3.0.98-1+cuda11.5_amd64.deb
 sudo dpkg -i install libcudnn8-dev_8.3.0.98-1+cuda11.5_amd64.deb
 
 #TensorRT
+# wget might be forbiden by Nvidia...  download via browser
 wget https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/8.2.0/local_repos/nv-tensorrt-repo-ubuntu2004-cuda11.4-trt8.2.0.6-ea-20210922_1-1_amd64.deb 
 sudo dpkg -i install nv-tensorrt-repo-ubuntu2004-cuda11.4-trt8.2.0.6-ea-20210922_1-1_amd64.deb
 
