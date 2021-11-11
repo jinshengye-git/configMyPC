@@ -19,11 +19,31 @@ sudo apt install git git-lfs
 ```
 sudo apt update
 sudo apt -y install  cmake cmake-gui zsh snap vim htop terminator gimp gawk build-essential dkms ccze 
-sudo apt upgrade
-sudo snap install ttyplot
 sudo apt autoremove
-sudo reboot
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt install gcc-7 g++-7 gcc-8 g++-8 gcc-9 g++-9
+# for opencv 4.1.1 it is better to use gcc-7
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70 --slave /usr/bin/g++ g++ /usr/bin/g++-7 --slave /usr/bin/gcov gcov /usr/bin/gcov-7
+#sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90 --slave /usr/bin/g++ g++ /usr/bin/g++-9 --slave /usr/bin/gcov gcov /usr/bin/gcov-9
+#sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 80 --slave /usr/bin/g++ g++ /usr/bin/g++-8 --slave /usr/bin/gcov gcov /usr/bin/gcov-8
+sudo update-alternatives --config gcc
 ```
+## Install Powerline fonts
+
+```
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+```
+## Install oh-my-zsh
+
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 
 ## Install Tex (optional)
 ```
@@ -38,7 +58,7 @@ sudo apt -y install texlive-full
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
 sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
 wget http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installers/cuda-repo-ubuntu2004-11-0-local_11.0.2-450.51.05-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu2004-11-0-local_11.0.2-450.51.05-1_amd64.deb
+sudo apt install ./cuda-repo-ubuntu2004-11-0-local_11.0.2-450.51.05-1_amd64.deb
 sudo apt-key add /var/cuda-repo-ubuntu2004-11-0-local/7fa2af80.pub
 sudo apt-get update
 sudo apt-get -y install cuda
@@ -80,10 +100,11 @@ Built on Sat_Aug_25_21:08:01_CDT_2018
 Cuda compilation tools, release 10.0, V10.0.130
 ```
 
-## Install zed sdk 3.2.2
-down load zed sdk from https://www.stereolabs.com/developers/release/3.2/
+## Install zed sdk 3.5
+down load zed sdk from https://www.stereolabs.com/developers/release/3.5/
 choose the correct version of CUDA and your Ubuntu then
 install it
+wget https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/3.5/ZED_SDK_Ubuntu20_cuda11.0_v3.5.6.run
 
 ## Install OpenCV 4.1.1
 
