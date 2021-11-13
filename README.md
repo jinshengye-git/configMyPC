@@ -249,13 +249,15 @@ cd fonts
 ```
 cd ~/app
 git clone https://github.com/SeaosRobotics/apriltag.git
-cd apriltag
-cmake .
+cd apriltag && mkdir build && cd build
+cmake ..
 make
 sudo make install
+cd ~
 ```
 ## Install libpointmatcher
 ```
+cd ~/app
 git clone git://github.com/ethz-asl/libnabo.git
 cd libnabo
 SRC_DIR=`pwd`
@@ -268,13 +270,14 @@ cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ${SRC_DIR}
 make
 sudo make install
 
-
+cd ~/app
 git clone https://github.com/ethz-asl/libpointmatcher.git
 cd libpointmatcher
 mkdir build && cd build
 cmake ..
 make
 sudo make install
+cd ~
 ```
 
 
