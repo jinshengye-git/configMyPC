@@ -1,10 +1,3 @@
-My personal habbit is to keep all git cloned folder in a directory named 'app'. I usually keep it under my home directory.
-
-for example :  you can create it by ```mkdir /home/$USER/app```
-
-this instruction is based on assuming you have this folder.
-
-
 # configMyPC
 
 things to do after install Ubuntu 20.04
