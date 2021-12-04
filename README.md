@@ -112,7 +112,6 @@ sudo apt -y install libtiff5-dev
 sudo apt -y install libtiff-dev
 sudo apt -y install libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
 sudo apt -y install libxine2-dev libv4l-dev
-sudo apt -y install libgtk2.0-dev libtbb-dev qt5-default
 sudo apt -y install libatlas-base-dev
 sudo apt -y install libfaac-dev libmp3lame-dev libtheora-dev
 sudo apt -y install libvorbis-dev libxvidcore-dev
@@ -122,7 +121,7 @@ sudo apt -y install x264 v4l-utils
 sudo apt -y install libprotobuf-dev protobuf-compiler
 sudo apt -y install libgoogle-glog-dev libgflags-dev
 sudo apt -y install libgphoto2-dev libeigen3-dev libhdf5-dev doxygen
-sudo apt -y install python3-dev python3-pip python3-venv python-dev python-pip
+sudo apt -y install python3-dev python3-pip python3-venv python-dev 
 sudo apt -y install libopenblas-dev libopenblas-base
 sudo apt -y install libgtk-3-dev
 sudo -H pip install numpy==1.19
@@ -130,23 +129,15 @@ sudo -H pip3 install numpy==1.19
 sudo -H pip3 install cython
 sudo -H pip install cython
 sudo apt -y install libsqlite3-dev
-sudo apt -y install libpcl-dev
-sudo apt -y install libboost-all-dev
 sudo apt -y install libproj-dev
-sudo apt -y install libqt5svg5-dev
-sudo apt -y install libvtk6-qt-dev
 sudo apt-get install libsuitesparse-dev
 cd ~
 mkdir app  &&  cd app
-git clone https://github.com/opencv/opencv.git
-git clone https://github.com/opencv/opencv_contrib.git
-cd opencv
-git checkout 4.1.1
-cd ../opencv_contrib
-git checkout 4.1.1
-cd ../opencv
-mkdir build
-cd build
+wget -O opencv.zip https://github.com/opencv/opencv/archive/refs/tags/4.5.2.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/refs/tags/4.5.2.zip
+unzip opencv.zip
+unzip opencv_contrib.zip
+cd opencv-4.5.2
 ```
 
 it is better use `cmake-gui` to configure, suppose you are in folder:  opencv/build/
