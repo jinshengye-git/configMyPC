@@ -71,6 +71,7 @@ sudo dpkg -i install nv-tensorrt-repo-ubuntu2004-cuda11.4-trt8.2.0.6-ea-20210922
 
 
 dpkg -l |grep cuda
+#sudo apt-mark hold ***
 dpkg --get-selections|grep hold
 
 nvidia-smi
