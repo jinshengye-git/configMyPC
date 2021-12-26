@@ -65,27 +65,7 @@ sudo apt -y install texlive-full
 ## Install CUDA and  cuDNN and TensorRT
 
 ```
-sudo apt -y install freeglut3 freeglut3-dev libxi-dev libxmu-dev
-sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
-wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu1804_10.1.168-1_amd64.deb
-sudo apt update
-sudo apt upgrade
-sudo apt -y install cuda-10-2
 
-#after reboot install cuDNN and TensorRT
-wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
-sudo apt -y install ./nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
-sudo apt update
-sudo apt -y install libcudnn8 libcudnn8-dev
-sudo apt -y install nvinfer-runtime-trt-repo-ubuntu1804-5.0.2-ga-cuda10.0
-sudo apt update
-sudo apt -y install -y --no-install-recommends libnvinfer-dev
-dpkg -l |grep cuda
-#sudo apt-mark hold ***
-dpkg --get-selections|grep hold
-
-nvidia-smi
 ```
 then add these lines to your .bashrc or  other  bash environment config files
 
