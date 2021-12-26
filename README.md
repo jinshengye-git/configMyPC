@@ -69,10 +69,10 @@ Cuda compilation tools, release 10.0, V10.0.130
 ```
 
 ## Install zed sdk 3.5
-down load zed sdk from https://www.stereolabs.com/developers/release/3.5/
+down load zed sdk from https://www.stereolabs.com/developers/release/
 choose the correct version of CUDA and your Ubuntu then
 install it
-wget https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/3.5/ZED_SDK_Ubuntu20_cuda11.0_v3.5.6.run
+
 
 ## Install OpenCV 4.1.1
 
