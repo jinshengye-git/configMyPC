@@ -11,7 +11,7 @@ sudo apt install git git-lfs
 ## Install useful things
 ```
 sudo apt update
-sudo apt -y install  cmake cmake-gui zsh snap vim htop terminator gimp gawk build-essential dkms ccze libboost-all-dev
+sudo apt -y install curl cmake cmake-gui zsh snap vim htop terminator gimp gawk build-essential dkms ccze libboost-all-dev
 sudo apt autoremove
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
@@ -48,33 +48,7 @@ sudo apt -y install texlive-full
 
 
 ```
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
-sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
-wget http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installers/cuda-repo-ubuntu2004-11-0-local_11.0.2-450.51.05-1_amd64.deb
-sudo apt install ./cuda-repo-ubuntu2004-11-0-local_11.0.2-450.51.05-1_amd64.deb
-sudo apt-key add /var/cuda-repo-ubuntu2004-11-0-local/7fa2af80.pub
-sudo apt-get update
-sudo apt-get -y install cuda
-sudo apt install nvidia-cuda-toolkit
 
-# cuDNN
-# wget might be forbiden by Nvidia...  download via browser
-wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.3.0/11.5_20211101/Ubuntu20_04-x64/libcudnn8_8.3.0.98-1+cuda11.5_amd64.deb
-wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.3.0/11.5_20211101/Ubuntu20_04-x64/libcudnn8-dev_8.3.0.98-1+cuda11.5_amd64.deb
-sudo dpkg -i install libcudnn8_8.3.0.98-1+cuda11.5_amd64.deb
-sudo dpkg -i install libcudnn8-dev_8.3.0.98-1+cuda11.5_amd64.deb
-
-#TensorRT
-# wget might be forbiden by Nvidia...  download via browser
-wget https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/8.2.0/local_repos/nv-tensorrt-repo-ubuntu2004-cuda11.4-trt8.2.0.6-ea-20210922_1-1_amd64.deb 
-sudo dpkg -i install nv-tensorrt-repo-ubuntu2004-cuda11.4-trt8.2.0.6-ea-20210922_1-1_amd64.deb
-
-
-dpkg -l |grep cuda
-#sudo apt-mark hold ***
-dpkg --get-selections|grep hold
-
-nvidia-smi
 ```
 then add these lines to your .bashrc or  other  bash environment config files
 
