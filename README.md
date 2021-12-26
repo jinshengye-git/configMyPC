@@ -68,7 +68,7 @@ Built on Sat_Aug_25_21:08:01_CDT_2018
 Cuda compilation tools, release 10.0, V10.0.130
 ```
 
-## Install zed sdk 3.5
+## Install zed sdk 
 down load zed sdk from https://www.stereolabs.com/developers/release/
 choose the correct version of CUDA and your Ubuntu then
 install it
