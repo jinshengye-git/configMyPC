@@ -46,7 +46,7 @@ sudo apt -y install texlive-full
 
 ## Install CUDA and  cuDNN and TensorRT
 
-
+follow this [link](https://www.kkaneko.jp/db/man.html#nvidiacuda)
 ```
 
 ```
