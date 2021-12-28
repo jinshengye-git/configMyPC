@@ -64,10 +64,7 @@ sudo apt -y install texlive-full
 
 ## Install CUDA and  cuDNN and TensorRT
 
-```
-
-```
-then add these lines to your .bashrc or  other  bash environment config files
+Offical way is recommended, follow this [link](https://www.kkaneko.jp/db/man.html#nvidiacuda)
 
 ```
 CUDA_VERSION=10.2
