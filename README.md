@@ -46,7 +46,7 @@ sudo apt -y install texlive-full
 
 ## Install CUDA 11.5 and  cuDNN 8 and TensorRT 8
 
-follow this [link](https://www.kkaneko.jp/db/man.html#nvidiacuda)
+follow this [link](https://qiita.com/cinchan/items/9718e1f26146dc5e3eaa)
 ```
 
 ```
