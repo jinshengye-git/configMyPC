@@ -1,6 +1,6 @@
 #!/bin/bash
-# Usage:
-# $1 : FOLDER_NAME_YOU_WANT_TO_UPLOAD
+# Usage: upload_dir /absolute/path/to/the/folder/you/want/to/upload username@destination_server /absolute/path/to/the/server
+# $1 : /absolute/path/to/the/folder/you/want/to/upload
 # $2 : username@destination_server
 # $3 : /absolute/path/to/the/server
 rsync --info=progress2 -az $1 $2:$3
