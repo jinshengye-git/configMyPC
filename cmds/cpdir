@@ -1,3 +1,6 @@
 #!/bin/bash
-
+# $1 : the folder name you want to copy
+# $2 : the destination you want to put
+# Usage:
+# cpdir folder_name_you_want_to_copy destination_you_want_to_put
 tar cf - $1 | pv |(cd $2; tar xf -)
