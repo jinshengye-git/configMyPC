@@ -1,0 +1,6 @@
+#!/bin/bash
+# Usage:
+# $1 : FOLDER_NAME_YOU_WANT_TO_UPLOAD
+# $2 : username@destination_server
+# $3 : /absolute/path/to/the/server
+rsync --info=progress2 -az $1 $2:$3
