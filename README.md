@@ -20,7 +20,9 @@ sudo apt install git git-lfs
 
 ## Nopasswd setting
 
+```
 sudo echo "username ALL=NOPASSWD: ALL">>/etc/sudoers.d/my_override
+```
 
 ## Install useful things
 ```
