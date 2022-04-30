@@ -18,7 +18,7 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo apt install git git-lfs
 ```
 
-## Nopasswd setting
+## Nopasswd setting (Optional)
 
 ```
 sudo echo "username ALL=NOPASSWD: ALL">>/etc/sudoers.d/my_override
