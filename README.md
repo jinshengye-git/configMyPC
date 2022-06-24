@@ -297,3 +297,87 @@ source ${ROS1_INSTALL_PATH}/setup.bash
 # . ~/ros_catkin_ws/install_isolated/setup.bash
 rosrun roscpp_tutorials listener
 ```
+## VSCode Font
+
+save the following in  `~/.config/Code/User/settings.json`
+
+```
+{
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.preferredDarkColorTheme": "Atom One Dark",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "editor.fontWeight": "400",
+    "editor.fontSize": 15,
+    "C_Cpp.updateChannel": "Insiders",
+    "debug.onTaskErrors": "showErrors",
+    "vsicons.dontShowNewVersionMessage": true,
+    "python.jediEnabled": false,
+    "terminal.integrated.inheritEnv": false,
+    "terminal.external.linuxExec": "Tilix",
+    "terminal.integrated.fontSize": 20,
+    "kite.showWelcomeNotificationOnStartup": false,
+    "cmake.configureOnOpen": false,
+    "oneDarkPro.bold": true,
+    "python.languageServer": "Pylance",
+    "explorer.confirmDelete": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.showStartPage": false,
+    "diffEditor.maxComputationTime": 9999,
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.defaultProfile.linux": "/bin/zsh (migrated)",
+    "terminal.integrated.profiles.linux": {
+        "/bin/zsh (migrated)": {
+            "path": "/bin/zsh",
+            "args": []
+        }
+    },
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#00e1ff"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "git.autofetch": true,
+    "editor.rulers": [
+    80,120
+    ],
+    "editor.wordWrap": "on",
+    "redhat.telemetry.enabled": true,
+    "cSpell.userWords": [
+        "asensor",
+        "checkopencm",
+        "cmds",
+        "coef",
+        "DGRAM",
+        "INET",
+        "ioboard",
+        "mlogger",
+        "Mlogging",
+        "mymath",
+        "nsecs",
+        "opencm",
+        "pyee",
+        "rbline",
+        "Recieving",
+        "recvfrom",
+        "reliab",
+        "roboline",
+        "roscore",
+        "rosgraph",
+        "rospy",
+        "rostopic",
+        "sendto",
+        "serialutil",
+        "Shengye",
+        "sona",
+        "velodyne"
+    ],
+    "editor.fontFamily": "'MesloLGS NF', 'MeloLGS Regular', monospace",
+    "editor.fontLigatures": false
+}
+```
