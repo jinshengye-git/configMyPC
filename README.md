@@ -60,6 +60,15 @@ Change the theme in `~/.zshrc`
 `ZSH_THEME="powerlevel10k/powerlevel10k"`
 Then restart **zsh**.
 
+## Git Gpg key
+```
+gpg --full-generate-key
+gpg --list-secret-keys --keyid-format=long  # you will get 'sec   rsa4096/xxxxxxxxxxx 0000-00-00 [SC]'
+gpg --armor --export xxxxxxxxxxx
+git config --global user.signingkey xxxxxxxxxxx
+git config --global commit.gpgsign true
+```
+
 ## Install CUDA 11.5 and  cuDNN 8 and TensorRT 8
 
 follow this [link](https://www.how2shout.com/linux/how-to-install-cuda-on-ubuntu-20-04-lts-linux/)
