@@ -11,7 +11,7 @@ sudo apt install git git-lfs
 ## Install useful things
 ```
 sudo apt update
-sudo apt -y install curl pv cmake cmake-gui zsh snap vim htop terminator gimp gawk build-essential dkms ccze libboost-all-dev
+sudo apt -y install curl pv cmake cmake-gui zsh snap vim htop terminator gimp gawk build-essential dkms ccze libboost-all-dev font-manager
 sudo apt autoremove
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
@@ -43,6 +43,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 
 ## p10k (optional for oh-my-zsh)
+**Use font-manager to install tty fonts in batch.**
 Download these four ttf files:
    - [MesloLGS NF Regular.ttf](
        https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
