@@ -52,6 +52,9 @@ Download these four ttf files:
        https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
    - [MesloLGS NF Bold Italic.ttf](
        https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
+
+   - [Nerd-Fonts Releases](https://github.com/ryanoasis/nerd-fonts/releases)
+
 ```
 cd ~/.oh-my-zsh/custom/themes
 git clone https://github.com/romkatv/powerlevel10k.git
