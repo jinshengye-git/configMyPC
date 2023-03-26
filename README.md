@@ -74,6 +74,13 @@ git config --global commit.gpgsign true
 
 ## Install CUDA 11.5 and  cuDNN 8 and TensorRT 8
 
+### Install from Nvidia official 
+
+go to Nvidia Download center to download all the packages you need. you can find the way easily by google.
+
+
+### Install from apt
+
 NOTE: Driver must be version 510
 
 ```
@@ -99,7 +106,7 @@ and apt-mark hold all listed packages.
 sudo apt-mark hold [******]
 ```
 
-you would like to install ZED SDK in next because it will install [cuDNN](https://developer.nvidia.com/cudnn) and [TensorRT](https://developer.nvidia.com/tensorrt) for you.
+you would like to install ZED SDK in next because it will install [cuDNN](https://developer.nvidia.com/cudnn) and [TensorRT 8 GA Update2](https://developer.nvidia.com/downloads/compute/machine-learning/tensorrt/secure/8.5.3/local_repos/nv-tensorrt-local-repo-ubuntu2204-8.5.3-cuda-11.8_1.0-1_amd64.deb) for you.
 
 ## Install zed sdk 3.8
 down load zed sdk from https://www.stereolabs.com/developers/release/
