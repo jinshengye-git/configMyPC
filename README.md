@@ -74,20 +74,34 @@ git config --global commit.gpgsign true
 
 ## Install CUDA 11.5 and  cuDNN 8 and TensorRT 8
 
-follow this [link](https://www.server-world.info/en/note?os=Ubuntu_22.04&p=nvidia&f=4)
-```
+NOTE: Driver must be version 510
 
 ```
-then add these lines to your .bashrc or  other  bash environment config files
+sudo apt install nvidia-driver-510 nvidia-utils-510
+```
+
+install CUDA 11.5
 
 ```
-CUDA_VERSION=11.5
-export PATH=/usr/local/cuda-$CUDA_VERSION/bin:${PATH}
-export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/local/cuda-$CUDA_VERSION/lib64:${LD_LIBRARY_PATH}
+sudo apt install nvidia-cuda-toolkit
+sudo apt install nvidia-cudnn
 ```
+
+hold all nvidia pkgs
+
+```
+dpkg -l | grep nvidia
+```
+
+and apt-mark hold all listed packages.
+
+```
+sudo apt-mark hold [******]
+```
+
 you would like to install ZED SDK in next because it will install [cuDNN](https://developer.nvidia.com/cudnn) and [TensorRT](https://developer.nvidia.com/tensorrt) for you.
 
-## Install zed sdk 3.7.4
+## Install zed sdk 3.8
 down load zed sdk from https://www.stereolabs.com/developers/release/
 choose the correct version of CUDA and your Ubuntu then
 install it, good news is : during the installation, zed sdk will install cuDNN8 and TensorRT8 as well.
@@ -97,14 +111,11 @@ install it, good news is : during the installation, zed sdk will install cuDNN8 
 https://medium.com/@pydoni/how-to-install-cuda-11-4-cudnn-8-2-opencv-4-5-on-ubuntu-20-04-65c4aa415a7b
 
 
-## Install ROS1
+## Install ROS1 (only Docker image)
 
-- sources.list `sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
-- keys: `sudo apt install curl; curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -`
-- install: `sudo apt update && sudo apt install ros-noetic-desktop-full`
-- environment: zsh `echo "source /opt/ros/noetic/setup.zsh" >> ~/.zshrc && source ~/.zshrc`
-- dependencies: `sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential`
-to set up **catkin_ws** you would like follow [here](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment).
+use 
+- GPU version: [seaos-docker](https://github.com/SeaosRobotics/seaos_docker) or
+- Without GPU [rmc-tugbot](https://github.com/SeaosRobotics/rmc-tugbot)
 
 ## Install ROS 2
 
