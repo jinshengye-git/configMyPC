@@ -74,7 +74,7 @@ git config --global commit.gpgsign true
 
 ## Install CUDA 11.5 and  cuDNN 8 and TensorRT 8
 
-follow this [link](https://www.how2shout.com/linux/how-to-install-cuda-on-ubuntu-20-04-lts-linux/)
+follow this [link](https://www.server-world.info/en/note?os=Ubuntu_22.04&p=nvidia&f=4)
 ```
 
 ```
