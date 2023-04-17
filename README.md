@@ -93,6 +93,11 @@ down load zed sdk from https://www.stereolabs.com/developers/release/
 choose the correct version of CUDA and your Ubuntu then
 install it, good news is : during the installation, zed sdk will install cuDNN8 and TensorRT8 as well.
 
+## theme for Dracula
+
+please check 
+- [terminator](https://draculatheme.com/terminator)
+- [tmux](https://draculatheme.com/tmux) needs [tpm plugin](https://github.com/tmux-plugins/tpm)
 
 ## Install OpenCV 4.5.1
 https://medium.com/@pydoni/how-to-install-cuda-11-4-cudnn-8-2-opencv-4-5-on-ubuntu-20-04-65c4aa415a7b
