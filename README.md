@@ -125,7 +125,16 @@ use
 - Without GPU [rmc-tugbot](https://github.com/SeaosRobotics/rmc-tugbot)
 
 ## Install ROS 2
+### Install Humble
+please follow this [instruction](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
+### Install Navigation2
+```
+sudo apt update && sudo apt install -y ros-humble-turtlebot3\* ros-humble-navigation2 ros-humble-nav2-bringup;
+sudo apt install -y python3-colcon-common-extensions 
+```
 
+
+### Build from Source
 build from source of [ROS2 Humble](https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html).
 
 ```
