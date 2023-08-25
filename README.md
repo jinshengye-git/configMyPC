@@ -117,6 +117,12 @@ install it, good news is : during the installation, zed sdk will install cuDNN8 
 ## Install OpenCV 4.5.1
 https://medium.com/@pydoni/how-to-install-cuda-11-4-cudnn-8-2-opencv-4-5-on-ubuntu-20-04-65c4aa415a7b
 
+## Download Gazebo models
+```
+mkdir ~/.gazebo
+cd ~/.gazebo
+git clone https://github.com/osrf/gazebo_models.git
+```
 
 ## Install ROS1 (only Docker image)
 
