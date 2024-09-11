@@ -78,6 +78,13 @@ export PATH=/usr/local/cuda-$CUDA_VERSION/bin:${PATH}
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/local/cuda-$CUDA_VERSION/lib64:${LD_LIBRARY_PATH}
 ```
 you would like to install ZED SDK in next because it will install [cuDNN](https://developer.nvidia.com/cudnn) and [TensorRT](https://developer.nvidia.com/tensorrt) for you.
+### Hold pkg
+hold all nvidia pkgs
+
+`dpkg -l | grep nvidia`
+and apt-mark hold all listed packages.
+
+`sudo apt-mark hold [******]`
 
 ## Install zed sdk 3.7.4
 down load zed sdk from https://www.stereolabs.com/developers/release/
