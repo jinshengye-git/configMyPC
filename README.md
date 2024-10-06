@@ -47,6 +47,11 @@ Download these four ttf files:
 
    - [Nerd-Fonts Releases](https://github.com/ryanoasis/nerd-fonts/releases)
 
+1.) Download a [Nerd Font](https://www.nerdfonts.com/font-downloads)
+
+2.) Unzip and copy to `~/.fonts`
+
+3.) Run the command `fc-cache -fv` to manually rebuild the font cache
 ```
 cd ~/.oh-my-zsh/custom/themes
 git clone https://github.com/romkatv/powerlevel10k.git
