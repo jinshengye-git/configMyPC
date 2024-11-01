@@ -35,7 +35,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 cd ~/.oh-my-zsh/plugins/
 git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git
-echo 'source "$HOME/.oh-my-zsh/plugins/spaceship-prompt/spaceship.zsh">>~/.zshrc
+echo 'source "$HOME/.oh-my-zsh/plugins/spaceship-prompt/spaceship.zsh"'>>~/.zshrc
 ```
 ## p10k (optional for oh-my-zsh)
 **Use font-manager to install tty fonts in batch.**
