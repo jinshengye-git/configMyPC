@@ -239,7 +239,7 @@ Then restart **zsh**.
 ## Git Gpg key
 ```
 gpg --full-generate-key
-gpg --list-secret-keys --keyid-format=long  # you will get 'sec   rsa4096/xxxxxxxxxxx 0000-00-00 [SC]'
+gpg --list-secret-keys --keyid-format=long  # you will get 'sec   rsa4096/xxxxxxxxxxx 0000-00-00 [SC]' if you are using rsa4096.
 gpg --armor --export xxxxxxxxxxx
 git config --global user.signingkey xxxxxxxxxxx
 git config --global commit.gpgsign true
