@@ -57,9 +57,49 @@ sudo systemctl restart docker
 curl -fsS https://dl.brave.com/install.sh | sh
 ```
 
-## BLUETOOTH CONFIGURATION FOR ARCH LINUX
+## Setup Ollama
 
-### INSTALLATION
+```
+mkdir app
+cd app 
+git clone https://github.com/HelgeSverre/ollama-gui.git
+cd ollama-gui
+
+echo '#!/bin/bash
+
+cd /home/$USER/app/ollama-gui
+
+docker compose up -d > /dev/null 2>&1
+
+echo "Ollama is runing in the background.\nYou can access by localhost:8080"
+'>>start_ollama.sh
+
+chmod +x start_ollama.sh
+
+echo '[Desktop Entry]
+Type=Application
+Exec=/home/$USER/app/ollama-gui/start_ollama.sh
+Hidden=false
+NoDisplay=false'>>~/.config/autostart/start_ollama.desktop
+
+
+alias ollama='docker exec -it ollama bash'>>~/.zshrc
+
+alias ollama-pull='docker exec -it ollama ollama pull llama3'>>~/.zshrc
+
+alias ollama-chat='docker exec -it ollama ollama chat'>>~/.zshrc
+
+alias ollama-list='docker exec -it ollama ollama list'>>~/.zshrc
+```
+
+
+
+
+
+
+## Bluetooth Setup
+
+### Installation
 
 - Install the ***bluez package***, providing the Bluetooth protocol stack.
 - Install the ***bluez-utils package***, providing the bluetoothctl utility.
@@ -67,7 +107,7 @@ curl -fsS https://dl.brave.com/install.sh | sh
 - The generic Bluetooth driver is the btusb kernel module. Check whether that module is loaded. If it is not, then load the module.
 - Start/enable bluetooth.service.
 
-#### INSTALL PACKAGES
+#### Install Packages
 ``` sh
 	$ sudo pacman -S bluez bluez-utils
 ```
@@ -78,7 +118,7 @@ To see if the bluetooth module is present
 ``` sh
 	$ lsmod | grep btusb
 ```
-#### CONFIGURATION
+#### Configuration
 
 
 ``` sh
@@ -89,7 +129,7 @@ To see if the bluetooth module is present
 	$ sudo systemctl enable bluetooth.service
 ```
 
-#### START BLUETOOTHCTL
+#### Start bluetoothctl
 Launch the command of the bluetooth
 
 ``` sh
@@ -108,32 +148,32 @@ Launch the command of the bluetooth
 ``` sh
 	[bluetooth]$ default-agent
 ```
-#### SCAN DEVICES
+#### Scan Devices
 
 ``` sh
 	[bluetooth]$ scan on
 ```
 
 find and select the MAC ADDRESS of the devices you want to connect
-#### TRUST
+#### Trust
 With this line we can remember the device even if is not connected
 ``` sh
 	[bluetooth]$ trust <Mac Address>
 ```
 
-#### PAIR
+#### Pair
 
 ``` sh
 	[bluetooth]$ pair <Mac Address>
 ```
 
-#### CONNECT
+#### Connect
 
 ``` sh
 	[bluetooth]$ connect <Mac Address>
 ```
 
-#### CLOSE SCAN AND EXIT
+#### Close Scan and Exit
 At the end power off the scan and exit
 
 ``` sh
@@ -143,7 +183,7 @@ At the end power off the scan and exit
 	[bluetooth]$ exit
 ```
 
-## ON STARTUP
+## On Startup
 To Start it automatically at startup
 ``` sh
  	$ sudo vim /etc/bluetooth/main.conf
