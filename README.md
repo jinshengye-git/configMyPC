@@ -51,6 +51,25 @@ sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
 ```
 
+### Install Kitty
+
+```
+sudo pacman -S kitty
+```
+
+#### install tdf
+
+[tdf](https://github.com/itsjunetime/tdf?tab=readme-ov-file) is a pdf viewer for terminal.
+follow the README to compile the tdf. 
+
+finally 
+
+```
+cp ./target/release/tdf ~/.local/bin/
+```
+
+you will be able to view pdf in terminal by `tdf your_file.pdf`
+
 ### Brave-browser
 
 ```
@@ -97,9 +116,9 @@ alias ollama-list='docker exec -it ollama ollama list'>>~/.zshrc
 
 
 
-## Bluetooth Setup
+### Bluetooth Setup
 
-### Installation
+#### Installation
 
 - Install the ***bluez package***, providing the Bluetooth protocol stack.
 - Install the ***bluez-utils package***, providing the bluetoothctl utility.
@@ -183,7 +202,7 @@ At the end power off the scan and exit
 	[bluetooth]$ exit
 ```
 
-## On Startup
+### On Startup
 To Start it automatically at startup
 ``` sh
  	$ sudo vim /etc/bluetooth/main.conf
@@ -201,13 +220,13 @@ And change the comment
 ```
 
 
-## Install oh-my-zsh
+### Install oh-my-zsh
 
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-## p10k (optional for oh-my-zsh)
+#### p10k (optional for oh-my-zsh)
 **Use font-manager to install tty fonts in batch.**
 Download these four ttf files:
    - [MesloLGS NF Regular.ttf](
@@ -221,7 +240,7 @@ Download these four ttf files:
 
    - [Nerd-Fonts Releases](https://github.com/ryanoasis/nerd-fonts/releases)
 
-### NerdFont Setup
+#### NerdFont Setup
 1.) Download a [Nerd Font](https://www.nerdfonts.com/font-downloads)
 
 2.) Unzip and copy to `~/.fonts`
@@ -236,7 +255,7 @@ Change the theme in `~/.zshrc`
 `ZSH_THEME="powerlevel10k/powerlevel10k"`
 Then restart **zsh**.
 
-## Git Gpg key
+### Git Gpg key
 ```
 gpg --full-generate-key
 gpg --list-secret-keys --keyid-format=long  # you will get 'sec   rsa4096/xxxxxxxxxxx 0000-00-00 [SC]' if you are using rsa4096.
@@ -252,7 +271,7 @@ git config --global commit.gpgsign true
 
 
 
-## VSCode Font
+### VSCode Font
 
 Install Font first.
 Download these four ttf files:
