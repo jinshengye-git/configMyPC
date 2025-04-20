@@ -1,0 +1,6 @@
+getnf
+mongodb-compass
+reiserfsprogs
+slack-desktop
+sublime-text-4
+virtualbox-ext-oracle
